@@ -118,8 +118,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val ileElementow = 1000 //zmienic na pobieranie z edittext
-        val ileRazy = 1000 //zmienic na pobieranie z edittext
+        val ileElementow = findViewById<EditText>(R.id.editTextNumber).toString().toInt()
+        val ileRazy = findViewById<EditText>(R.id.editTextNumber2).toString().toInt()
         val tablica = IntArray(ileElementow){Random.nextInt(1,10)}
         findViewById<Button>(R.id.button1).setOnClickListener {
             val czas1 = System.currentTimeMillis()
